@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaTimes } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
@@ -21,20 +22,22 @@ const Home = () => {
   return (
     <div className="w-screen h-full bg-cyan-950 tablet:w-screen tablet:fixed">
       <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
-        <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
-        <NavLink to="/" activeClassName="active">
-            <button>Home</button>
-          </NavLink> 
-          <NavLink to="/project" activeClassName="active">
-            <button>Project</button>
-          </NavLink>
-          <NavLink to="/about" activeClassName="active">
-            <button>About</button>
-          </NavLink>
-          <NavLink to="/contact" activeClassName="active">
-            <button>Contact</button>
-          </NavLink>
-        </nav>
+        <Flip bottom>
+          <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
+            <NavLink to="/" activeClassName="active">
+              <button>Home</button>
+            </NavLink>
+            <NavLink to="/project" activeClassName="active">
+              <button>Project</button>
+            </NavLink>
+            <NavLink to="/about" activeClassName="active">
+              <button>About</button>
+            </NavLink>
+            <NavLink to="/contact" activeClassName="active">
+              <button>Contact</button>
+            </NavLink>
+          </nav>
+        </Flip>
 
         <Flip bottom>
           <nav className="flex flex-row justify-between items-center p-2 tablet:hidden">
@@ -73,42 +76,51 @@ const Home = () => {
         developer with a knack for crafting robust and scalable web application.
       </p>
 
-      <div className="rounded-2xl h-56 w-96 m-auto mt-4 tablet:hidden">
-        <p className="text-center text-[20px] text-slate-300 font-bold underline decoration-2">
-          SKILLS
-        </p>
-
-        <div className="grid grid-cols-2 gap-4 p-5">
-          <h4 className="flex items-center text-2xl text-slate-200 gap-4">
-            JavaScript
+      <div className="rounded-2xl bg-cyan-900 h-48 mx-4 m-auto mt-4 tablet:hidden">
+        <div className="flex justify-center m-auto">
+          
+            <li className="underline decoration-2 text-slate-200 text-[18px] font-semibold">My Tech Skills</li>
+          
+        </div>
+        <div className="grid grid-cols-2 gap-4 p-3 justify-items-center">
+          <h4 className="flex items-center text-xl text-slate-200 gap-4">
+            <li>JavaScript</li>
             <TbBrandJavascript className="h-8 w-8 text-green-400" />
           </h4>
 
-          <h4 className="flex items-center text-2xl text-slate-200 gap-4">
-            React
+          <h4 className="flex items-center text-xl text-slate-200 gap-4">
+            <li>React</li>
             <FaReact className="h-8 w-8 text-green-400" />
           </h4>
 
-          <h4 className="flex items-center text-2xl text-slate-200 gap-4">
-            Tailwind
+          <h4 className="flex items-center text-xl text-slate-200 gap-4">
+            <li>Tailwind</li>
             <SiTailwindcss className="h-10 w-10 text-green-400" />
           </h4>
 
-          <h4 className="flex items-center text-2xl text-slate-200 gap-4">
-            Node.js
+          <h4 className="flex items-center text-xl text-slate-200 gap-4">
+            <li>Node.js</li>
             <FaNodeJs className="h-8 w-8 text-green-400" />
           </h4>
 
-          <h4 className="flex items-center text-2xl text-slate-200 gap-4">
-            Express
+          <h4 className="flex items-center text-xl text-slate-200 gap-4">
+            <li>Express</li>
             <SiDevexpress className="h-8 w-8 text-green-400" />
           </h4>
 
-          <h4 className="flex items-center text-2xl text-slate-200 gap-4">
-            MongoDB
+          <h4 className="flex items-center text-xl text-slate-200 gap-4">
+            <li>MongoDB</li>
             <SiMongodb className="h-8 w-8 text-green-400" />
           </h4>
         </div>
+      </div>
+
+      <div className="flex justify-center m-auto mt-4">
+        <Link to="project">
+          <button className="bg-green-900 w-44 h-8 text-slate-100 text-[18px] font-semibold rounded-xl hover:bg-black hover:text-yellow-300">
+            View my projects
+          </button>
+        </Link>
       </div>
 
       <footer className="bg-cyan-900 h-16 w-full items-center mt-4 tablet:hidden">
@@ -120,47 +132,47 @@ const Home = () => {
       </footer>
 
       <div className="hidden tablet:flex flex-row justify-between items-center">
-        <aside className="m-auto w-40 mt-14">
-          <p className="text-center text-[20px] text-slate-100 font-bold underline">
-            <li>My Tech Stack</li>
-          </p>
+        <Flip right>
+          <aside className="m-auto mt-4">
+            <p className="text-center text-[20px] text-slate-100 font-bold underline">
+              My Tech Skill
+            </p>
 
-          <Flip right>
             <div className="flex flex-col gap-3 items-center pt-2 rounded-md mt-6">
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
-                JavaScript
+                <li>JavaScript</li>
                 <TbBrandJavascript className="h-8 w-8 text-cyan-400" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
-                React
+                <li>React</li>
                 <FaReact className="h-8 w-8 text-cyan-400" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
-                Tailwind
+                <li>Tailwind</li>
                 <SiTailwindcss className="h-10 w-10 text-cyan-400" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
-                Node.js
+                <li>Node.js</li>
                 <FaNodeJs className="h-8 w-8 text-cyan-400" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
-                Express
+                <li>Express</li>
                 <SiDevexpress className="h-8 w-8 text-cyan-400" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
-                MongoDB
+                <li>MongoDB</li>
                 <SiMongodb className="h-8 w-8 text-cyan-400" />
               </h4>
             </div>
-          </Flip>
-        </aside>
+          </aside>
+        </Flip>
 
-        <main className="h-screen w-[550px] border-2 border-green-300 mt-14 border-y-0">
+        <main className="h-screen w-[550px] border-2 border-dashed border-green-300 mt-1 border-y-0">
           <div className="m-auto items-center">
             <img src={image} alt="" className="w-44 h-44 m-auto rounded-full" />
             <Zoom>
@@ -170,7 +182,6 @@ const Home = () => {
                 application.
               </p>
             </Zoom>
-           
           </div>
         </main>
 
