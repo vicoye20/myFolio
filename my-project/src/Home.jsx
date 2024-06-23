@@ -134,19 +134,19 @@ const Home = () => {
       <div className="hidden tablet:flex flex-row justify-between items-center">
         <Flip right>
           <aside className="m-auto mt-4">
-            <p className="text-center text-[20px] text-slate-100 font-bold underline">
+            <li className="text-center text-[20px] text-yellow-300 font-bold underline">
               My Tech Skill
-            </p>
+            </li>
 
             <div className="flex flex-col gap-3 items-center pt-2 rounded-md mt-6">
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
                 <li>JavaScript</li>
-                <TbBrandJavascript className="h-8 w-8 text-cyan-400" />
+                <TbBrandJavascript className="h-8 w-8 text-blue-500" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
                 <li>React</li>
-                <FaReact className="h-8 w-8 text-cyan-400" />
+                <FaReact className="h-8 w-8 text-green-400" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
@@ -156,23 +156,23 @@ const Home = () => {
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
                 <li>Node.js</li>
-                <FaNodeJs className="h-8 w-8 text-cyan-400" />
+                <FaNodeJs className="h-8 w-8 text-purple-500" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
                 <li>Express</li>
-                <SiDevexpress className="h-8 w-8 text-cyan-400" />
+                <SiDevexpress className="h-7 w-8 text-cyan-600" />
               </h4>
 
               <h4 className="flex items-center text-2xl text-slate-100 gap-4">
                 <li>MongoDB</li>
-                <SiMongodb className="h-8 w-8 text-cyan-400" />
+                <SiMongodb className="h-8 w-8 text-yellow-300" />
               </h4>
             </div>
           </aside>
         </Flip>
 
-        <main className="h-screen w-[550px] border-2 border-dashed border-green-300 mt-1 border-y-0">
+        <main className="h-screen w-[550px] mt-1">
           <div className="m-auto items-center">
             <img src={image} alt="" className="w-44 h-44 m-auto rounded-full" />
             <Zoom>
@@ -186,14 +186,14 @@ const Home = () => {
         </main>
 
         <aside className="w-[550px]">
-          <p className="text-center text-[20px] text-slate-300 font-bold underline">
+          <p className="text-center text-[20px] text-yellow-300 font-bold underline">
             PROJECTS
           </p>
         </aside>
       </div>
 
       <footer className="hidden tablet:flex justify-center bg-cyan-900 h-16 w-full items-center fixed bottom-0">
-        <p className="text-center text-slate-300 text-[18px] p-4 font-bold">
+        <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
           &copy; 2024 Oyedokun V. All rights reserved.
         </p>
       </footer>

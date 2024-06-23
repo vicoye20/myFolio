@@ -12,7 +12,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-screen h-full bg-gray-900 tablet:w-screen tablet:fixed">
+    <div className="w-screen h-full bg-gray-900 tablet:w-screen">
     <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
       <Flip bottom>
         <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
@@ -59,9 +59,9 @@ const About = () => {
       </Flip>
     </header>
 
-      <h1 className="text-center text-2xl p-16 underline text-slate-100 tablet:p-28 font-bold">
+      <li className="text-center text-2xl p-16 underline text-yellow-300 tablet:p-28 font-bold">
         About Me!
-      </h1>
+      </li>
 
       <div className="m-auto items-center w-44 h-44 -mt-5 tablet:hidden">
         <img src={image} alt="" className="w-44 h-44 rounded-full" />
@@ -71,7 +71,7 @@ const About = () => {
         <img src={image} alt="" className="w-44 h-44 rounded-full" />
       </div>
 
-      <p className="text-[18px] text-center text-slate-100 w-96 border-2 rounded-md border-green-500 m-auto mt-10 tablet:hidden">
+      <p className="text-[18px] text-center text-slate-100 w-96 m-auto mt-10 tablet:hidden">
         Hello , I am Oyedokun Victor Ayobami. I'm a passionate full-stack
         developer with a knack for crafting robust and scalable web
         applications, I am a dedicated and versatile frontend developer with a
@@ -93,7 +93,7 @@ const About = () => {
       </p>
 
       <Zoom>
-        <p className="hidden tablet:flex text-[18px] text-center text-slate-100 font-bold p-4 mt-8 w-[75%] m-auto border-4 border-green-500 rounded-[20px]">
+        <p className="hidden tablet:flex text-[18px] text-center text-slate-100 font-bold p-4 mt-8 w-[75%] m-auto">
         Hello , I am Oyedokun Victor Ayobami. I'm a passionate full-stack
         developer with a knack for crafting robust and scalable web
         applications, I am a dedicated and versatile frontend developer with a
@@ -117,14 +117,14 @@ const About = () => {
 
       <footer className="bg-cyan-900 h-16 w-full items-center mt-4 tablet:hidden">
         <marquee behavior="" direction="left">
-          <p className="text-center text-slate-100 text-[18px] p-4 font-bold">
+          <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
             &copy; 2024 Oyedokun V. All rights reserved.
           </p>
         </marquee>
       </footer>
 
       <footer className="hidden tablet:flex justify-center bg-cyan-900 h-16 w-full items-center mt-4">
-        <p className="text-center text-slate-100 text-[18px] p-4 font-bold">
+        <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
           &copy; 2024 Oyedokun V. All rights reserved.
         </p>
       </footer>

@@ -62,14 +62,14 @@ const Project = () => {
 
       <footer className="bg-cyan-900 h-16 w-full fixed bottom-0 items-center mt-4 tablet:hidden">
         <marquee behavior="" direction="left">
-          <p className="text-center text-white text-[18px] p-4 font-bold">
+          <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
             &copy; 2024 Oyedokun V. All rights reserved.
           </p>
         </marquee>
       </footer>
 
       <footer className="hidden tablet:flex justify-center bg-cyan-900 h-16 w-full items-center fixed bottom-0">
-        <p className="text-center text-slate-300 text-[18px] p-4 font-bold">
+        <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
           &copy; 2024 Oyedokun V. All rights reserved.
         </p>
       </footer>

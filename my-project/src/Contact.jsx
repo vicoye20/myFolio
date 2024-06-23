@@ -79,7 +79,7 @@ const Contact = () => {
       </Flip>
     </header>
 
-      <div className="m-auto pt-16 items-center flex flex-row justify-evenly gap-4">
+      <div className="m-auto pt-20 items-center flex flex-row justify-evenly gap-4">
         <button className="flex flex-row items-center gap-2 border-2 border-green-600 rounded-md text-slate-100 w-40 h-10 p-3">
           <FaWhatsapp />
           <a href="https://wa.me/2349055706732">WhatsApp Me!</a>
@@ -167,7 +167,7 @@ const Contact = () => {
         </div>
       </Zoom>
 
-      <footer className="hidden bg-cyan-900 h-16 w-full items-center fixed bottom-0">
+      <footer className="hidden tablet:flex flex-row bg-cyan-900 h-16 w-full justify-items-center fixed bottom-0">
         <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
           &copy; 2024 Oyedokun V. All rights reserved.
         </p>
