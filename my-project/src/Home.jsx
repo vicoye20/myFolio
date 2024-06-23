@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { GiHamburgerMenu } from "react-icons/gi"
 import { FaTimes } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-screen h-full bg-cyan-950 tablet:w-screen tablet:fixed">
+    <div className="w-screen h-full bg-gray-900 tablet:w-screen tablet:fixed">
       <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
         <Flip bottom>
           <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
@@ -41,14 +41,14 @@ const Home = () => {
 
         <Flip bottom>
           <nav className="flex flex-row justify-between items-center p-2 tablet:hidden">
-            <h1 className="font-bold text-slate-100 text-[20px]">
+            <h1 className="font-bold text-yellow-300 text-[20px]">
               Oyedokun V.
             </h1>
             <button onClick={toggleMenu}>
-              <RxHamburgerMenu className="h-6 w-6 text-slate-100" />
+              <GiHamburgerMenu className="h-6 w-6 text-yellow-300 font-extrabold" />
             </button>
             {isOpen && (
-              <div className="flex flex-col w-32 h-36 bg-cyan-900 mt-6 font-bold text-[18px] text-white gap-2 items-center absolute right-0 top-6">
+              <div className="flex flex-col w-32 h-36 bg-cyan-900 mt-6 font-bold text-[18px] text-white gap-2 items-center absolute right-0 top-6 rounded-bl-2xl rounded-br-2xl">
                 <NavLink to="/" activeClassName="active">
                   <button className="hover:text-green-500">Home</button>
                 </NavLink>
@@ -76,16 +76,16 @@ const Home = () => {
         developer with a knack for crafting robust and scalable web application.
       </p>
 
-      <div className="rounded-2xl bg-cyan-900 h-48 mx-4 m-auto mt-4 tablet:hidden">
+      <div className="rounded-2xl bg-gray-950 h-48 mx-4 m-auto mt-4 tablet:hidden">
         <div className="flex justify-center m-auto">
           
-            <li className="underline decoration-2 text-slate-200 text-[18px] font-semibold">My Tech Skills</li>
+            <li className="underline decoration-2 text-yellow-300 text-[18px] font-semibold">My Tech Skills</li>
           
         </div>
         <div className="grid grid-cols-2 gap-4 p-3 justify-items-center">
           <h4 className="flex items-center text-xl text-slate-200 gap-4">
             <li>JavaScript</li>
-            <TbBrandJavascript className="h-8 w-8 text-green-400" />
+            <TbBrandJavascript className="h-8 w-8 text-blue-500" />
           </h4>
 
           <h4 className="flex items-center text-xl text-slate-200 gap-4">
@@ -100,17 +100,17 @@ const Home = () => {
 
           <h4 className="flex items-center text-xl text-slate-200 gap-4">
             <li>Node.js</li>
-            <FaNodeJs className="h-8 w-8 text-green-400" />
+            <FaNodeJs className="h-8 w-8 text-purple-500" />
           </h4>
 
           <h4 className="flex items-center text-xl text-slate-200 gap-4">
             <li>Express</li>
-            <SiDevexpress className="h-8 w-8 text-green-400" />
+            <SiDevexpress className="h-7 w-8 text-cyan-600" />
           </h4>
 
           <h4 className="flex items-center text-xl text-slate-200 gap-4">
             <li>MongoDB</li>
-            <SiMongodb className="h-8 w-8 text-green-400" />
+            <SiMongodb className="h-8 w-8 text-yellow-500" />
           </h4>
         </div>
       </div>
@@ -125,7 +125,7 @@ const Home = () => {
 
       <footer className="bg-cyan-900 h-16 w-full items-center mt-4 tablet:hidden">
         <marquee behavior="" direction="left">
-          <p className="text-center text-white text-[18px] p-4 font-bold">
+          <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
             &copy; 2024 Oyedokun V. All rights reserved.
           </p>
         </marquee>
