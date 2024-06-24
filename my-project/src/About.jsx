@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
 import image from "../src/image/ppp.png";
 import { GiHamburgerMenu } from "react-icons/gi"
+import { GiDevilMask } from "react-icons/gi";
 import { Flip, Zoom } from "react-reveal";
 
 const About = () => {
@@ -33,12 +34,10 @@ const About = () => {
 
       <Flip bottom>
         <nav className="flex flex-row justify-between items-center p-2 tablet:hidden">
-          <h1 className="font-bold text-yellow-300 text-[20px]">
-            Oyedokun V.
-          </h1>
-          <button onClick={toggleMenu}>
-            <GiHamburgerMenu className="h-6 w-6 text-yellow-300 font-extrabold" />
-          </button>
+        <div className="rounded-full text-yellow-300 bg-black w-10 h-10 flex items-center justify-center -mt-1"><GiDevilMask className="w-8 h-8"/></div>
+            <button onClick={toggleMenu}>
+              <GiHamburgerMenu className="h-8 w-8 text-yellow-300 font-extrabold" />
+            </button>
           {isOpen && (
             <div className="flex flex-col w-32 h-36 bg-cyan-900 mt-6 font-bold text-[18px] text-white gap-2 items-center absolute right-0 top-6 rounded-bl-2xl rounded-br-2xl">
               <NavLink to="/" activeClassName="active">

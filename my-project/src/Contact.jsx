@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi"
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GiDevilMask } from "react-icons/gi";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Flip, Zoom } from "react-reveal";
@@ -33,54 +34,52 @@ const Contact = () => {
 
   return (
     <div className="w-screen h-screen bg-gray-900 tablet:w-screen tablet:fixed">
-    <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
-      <Flip bottom>
-        <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
-          <NavLink to="/" activeClassName="active">
-            <button>Home</button>
-          </NavLink>
-          <NavLink to="/project" activeClassName="active">
-            <button>Project</button>
-          </NavLink>
-          <NavLink to="/about" activeClassName="active">
-            <button>About</button>
-          </NavLink>
-          <NavLink to="/contact" activeClassName="active">
-            <button>Contact</button>
-          </NavLink>
-        </nav>
-      </Flip>
+      <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
+        <Flip bottom>
+          <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
+            <NavLink to="/" activeClassName="active">
+              <button>Home</button>
+            </NavLink>
+            <NavLink to="/project" activeClassName="active">
+              <button>Project</button>
+            </NavLink>
+            <NavLink to="/about" activeClassName="active">
+              <button>About</button>
+            </NavLink>
+            <NavLink to="/contact" activeClassName="active">
+              <button>Contact</button>
+            </NavLink>
+          </nav>
+        </Flip>
 
-      <Flip bottom>
-        <nav className="flex flex-row justify-between items-center p-2 tablet:hidden">
-          <h1 className="font-bold text-yellow-300 text-[20px]">
-            Oyedokun V.
-          </h1>
-          <button onClick={toggleMenu}>
-            <GiHamburgerMenu className="h-6 w-6 text-yellow-300 font-extrabold" />
-          </button>
-          {isOpen && (
-            <div className="flex flex-col w-32 h-36 bg-cyan-900 mt-6 font-bold text-[18px] text-white gap-2 items-center absolute right-0 top-6 rounded-bl-2xl rounded-br-2xl">
-              <NavLink to="/" activeClassName="active">
-                <button className="hover:text-green-500">Home</button>
-              </NavLink>
-              <NavLink to="/project" activeClassName="active">
-                <button className="hover:text-green-500">Projects</button>
-              </NavLink>
-              <NavLink to="/contact" activeClassName="active">
-                <button className="hover:text-green-500">Contact</button>
-              </NavLink>
-              <NavLink to="/about" activeClassName="active">
-                <button className="hover:text-green-500">About</button>
-              </NavLink>
-            </div>
-          )}
-        </nav>
-      </Flip>
-    </header>
+        <Flip bottom>
+          <nav className="flex flex-row justify-between items-center p-2 tablet:hidden">
+          <div className="rounded-full text-yellow-300 bg-black w-10 h-10 flex items-center justify-center -mt-1"><GiDevilMask className="w-8 h-8"/></div>
+            <button onClick={toggleMenu}>
+              <GiHamburgerMenu className="h-8 w-8 text-yellow-300 font-extrabold" />
+            </button>
+            {isOpen && (
+              <div className="flex flex-col w-32 h-36 bg-cyan-900 mt-6 font-bold text-[18px] text-white gap-2 items-center absolute right-0 top-6 rounded-bl-2xl rounded-br-2xl">
+                <NavLink to="/" activeClassName="active">
+                  <button className="hover:text-green-500">Home</button>
+                </NavLink>
+                <NavLink to="/project" activeClassName="active">
+                  <button className="hover:text-green-500">Projects</button>
+                </NavLink>
+                <NavLink to="/contact" activeClassName="active">
+                  <button className="hover:text-green-500">Contact</button>
+                </NavLink>
+                <NavLink to="/about" activeClassName="active">
+                  <button className="hover:text-green-500">About</button>
+                </NavLink>
+              </div>
+            )}
+          </nav>
+        </Flip>
+      </header>
 
       <div className="m-auto pt-20 items-center flex flex-row justify-evenly gap-4">
-        <button className="flex flex-row items-center gap-2 border-2 border-green-600 rounded-md text-slate-100 w-40 h-10 p-3">
+        <button className="flex flex-row items-center gap-2 border-2 border-yellow-400 rounded-md text-slate-100 w-40 h-10 p-3">
           <FaWhatsapp />
           <a href="https://wa.me/2349055706732">WhatsApp Me!</a>
         </button>
