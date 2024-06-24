@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-screen h-screen bg-gray-900 tablet:w-screen tablet:fixed">
+    <div className="w-screen h-full bg-gray-900 tablet:w-screen tablet:fixed">
       <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
         <Flip bottom>
           <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
@@ -90,8 +90,10 @@ const Contact = () => {
         </button>
       </div>
 
+      <p className="text-white text-center mt-4 font-semibold text-[18px]">Email : oyedokunvictorayobami@gmail.com</p>
+
       <Zoom>
-        <div className="flex flex-col gap-2 m-auto mt-20 w-[100%] tablet:m-auto tablet:w-[50%]">
+        <div className="flex flex-col gap-2 m-auto mt-10 w-[100%] tablet:m-auto tablet:w-[50%]">
           <form className="flex flex-col gap-2 p-8" onSubmit={handleSubmit}>
             <h1 className="text-[25px] text-center text-yellow-300 underline">
               Send a Message!
@@ -157,7 +159,7 @@ const Contact = () => {
             />
 
             <button
-              className="bg-slate-100 text-green-800 rounded-md p-2 w-full font-bold hover:bg-yellow-400 hover:text-black"
+              className="bg-slate-100 text-green-800 rounded-md p-2 w-full font-bold mb-10 hover:bg-yellow-400 hover:text-black"
               type="submit"
             >
               Submit
@@ -166,7 +168,7 @@ const Contact = () => {
         </div>
       </Zoom>
 
-      <footer className="hidden tablet:flex flex-row bg-cyan-900 h-16 w-full justify-items-center fixed bottom-0">
+      <footer className="tablet:flex flex-row bg-cyan-900 h-16 w-full justify-items-center fixed bottom-0">
         <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
           &copy; 2024 Oyedokun V. All rights reserved.
         </p>
