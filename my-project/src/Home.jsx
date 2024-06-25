@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { GiDevilMask } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
@@ -123,12 +124,18 @@ const Home = () => {
         </Link>
       </div>
 
-      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 tablet:hidden">
-        <marquee behavior="" direction="left">
-          <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
-            &copy; 2024 Oyedokun V. All rights reserved.
+      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between tablet:hidden">
+          <p className="text-center text-yellow-300 text-[16px] font-bold">
+            Oyedokun V.&copy;
           </p>
-        </marquee>
+
+          <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 font-semibold hover:bg-black hover:text-yellow-300">
+          <FaWhatsapp />
+          <a href="https://wa.me/2349055706732">WhatsApp</a>
+        </button>
+
+        <li className="text-yellow-300 font-semibold text-[16px]">Available for Job</li>
+       
       </footer>
 
       <div className="hidden tablet:flex flex-row justify-between items-center">

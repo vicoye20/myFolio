@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GiDevilMask } from "react-icons/gi";
+import { FaWhatsapp } from "react-icons/fa";
 import { Flip } from "react-reveal";
 import image1 from "./image/QuiZ.png";
 import image2 from "./image/dico.png";
@@ -67,8 +68,8 @@ const Project = () => {
       </h1>
 
       <div className="grid columns-2 gap-2">
-        <div className="mt-4 grid columns-1 border-2 border-cyan-300 border-x-0 border-dashed rounded-2xl justify-items-center">
-          <div className="flex justify-center gap-2 p-1">
+        <div className="mt-4 grid columns-1 justify-items-center">
+          <div className="flex flex-row justify-evenly gap-4 p-2">
             <img src={image1} alt="" className="h-44 mt-4" />
             <p className="text-white text-[14px] mt-4 font-semibold">
               The Quiz App is a dynamic and interactive web application designed
@@ -83,8 +84,8 @@ const Project = () => {
           </button>
         </div>
 
-        <div className="mt-4 grid columns-1 border-2 border-cyan-300 border-x-0 border-dashed rounded-2xl justify-items-center">
-          <div className="flex justify-center gap-2 p-1">
+        <div className="mt-4 grid columns-1 justify-items-center">
+          <div className="flex flex-row justify-evenly gap-4 p-2">
             <img src={image2} alt="" className="h-44 mt-4" />
             <p className="text-white text-[14px] mt-4 font-semibold">
               A dictionary API is a web service that allows developers to
@@ -99,9 +100,9 @@ const Project = () => {
           </button>
         </div>
 
-        <div className="mt-4 grid columns-1 border-2 border-cyan-300 border-x-0 border-dashed rounded-2xl justify-items-center">
-          <div className="flex justify-center gap-2 p-1">
-            <img src={image3} alt="" className="h-40 w-44 mt-4" />
+        <div className="mt-4 grid columns-1 justify-items-center">
+          <div className="flex flex-row justify-evenly gap-4 p-2">
+            <img src={image3} alt="" className="h-40 w-44 mt-4 rounded-2xl" />
             <p className="text-white text-[14px] mt-4 font-semibold">
               A country API is a web service that provides detailed information
               about countries around the world. This API allows developers to
@@ -114,15 +115,28 @@ const Project = () => {
             <a href="https://country-s-api.vercel.app/">View Project</a>
           </button>
         </div>
+        <h1 className="pt-4 text-center text-yellow-300 text-xl font-semibold underline decoration-2">
+          BACK-END PROJECT
+        </h1>
+        <div className="mt-4 grid columns-1 border-2 border-cyan-300 border-x-0 border-dashed rounded-2xl justify-items-center">
+
+        </div>
 
       </div>
 
-      <footer className="bg-cyan-900 h-16 mb-0 items-center mt-4 tablet:hidden">
-        <marquee behavior="" direction="left">
-          <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
-            &copy; 2024 Oyedokun V. All rights reserved.
-          </p>
-        </marquee>
+      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between tablet:hidden">
+        <p className="text-center text-yellow-300 text-[16px] font-bold">
+          Oyedokun V.&copy;
+        </p>
+
+        <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 font-semibold hover:bg-black hover:text-yellow-300">
+          <FaWhatsapp />
+          <a href="https://wa.me/2349055706732">WhatsApp</a>
+        </button>
+
+        <li className="text-yellow-300 font-semibold text-[16px]">
+          Available for Job
+        </li>
       </footer>
 
       <footer className="hidden tablet:flex justify-center bg-cyan-900 h-16 w-full items-center fixed bottom-0">
