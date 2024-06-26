@@ -61,17 +61,18 @@ const About = () => {
         </Flip>
       </header>
 
-      <li className="text-center text-2xl decoration-2 p-16 underline text-yellow-300 tablet:p-28 font-bold">
+      <li className="text-center text-2xl decoration-2 p-16 underline text-yellow-300 tablet:font-bold">
         About Me!
       </li>
 
       <div className="m-auto items-center w-44 h-44 -mt-5 tablet:hidden">
         <img src={image} alt="" className="w-44 h-44 rounded-full" />
       </div>
-
-      <div className="hidden m-auto items-center w-44 h-44 -mt-20 tablet:flex">
-        <img src={image} alt="" className="w-44 h-44 rounded-full" />
-      </div>
+      
+        <div className="hidden m-auto items-center w-44 h-44 -mt-12 tablet:flex">
+          <img src={image} alt="" className="w-44 h-44 rounded-full" />
+        </div>
+      
 
       <div className="w-full h-40 mt-2 text-center p-2 tablet:hidden">
         <p className="text-[16.5px] text-slate-100 font-semibold">
@@ -84,7 +85,7 @@ const About = () => {
       </div>
 
       <div className="w-full h-52 p-3 tablet:hidden">
-        <p className="text-cyan-300 text-center text-xl underline decoration-2 font-semibold">
+        <p className="text-cyan-300 text-center text-xl underline decoration-2 font-semibold animate-pulse">
           MY SKILLS.
         </p>
         <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
@@ -114,8 +115,8 @@ const About = () => {
         </strong>
       </div>
 
-      <div className="w-full h-56 p-2 tablet:hidden">
-        <p className="text-center text-cyan-400 underline decoration-2 font-semibold text-xl">
+      <div className="w-full h-64 p-2 mb-16 tablet:hidden">
+        <p className="text-center text-cyan-400 underline decoration-2 font-semibold text-xl animate-pulse">
           MY APPROACH.
         </p>
         <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
@@ -146,43 +147,94 @@ const About = () => {
       </div>
 
       <Zoom>
-        <p className="hidden tablet:flex text-[18px] text-center text-slate-100 font-bold p-4 mt-8 w-[75%] m-auto">
-          Hello , I am Oyedokun Victor Ayobami. I'm a passionate full-stack
-          developer with a knack for crafting robust and scalable web
-          applications, I am a dedicated and versatile frontend developer with a
-          passion for creating efficient and user-friendly web applications.
-          With 2 years of professional experience, I have worked with a variety
-          of technologies, including JavaScript, React, Next.js, and I use
-          Node.js for backend & MongoDB for database. My journey in web
-          development began with a deep curiosity for how things work, and it
-          has evolved into a career where I continuously strive to learn and
-          adapt to new challenges. I thrive in collaborative environments and
-          enjoy solving complex problems to deliver high-quality solutions.
-          Outside of coding, I enjoy staying active, exploring new technologies,
-          and contributing to open-source projects. My goal is to turn ideas
-          into reality through code. With a keen eye for detail and a love for
-          clean code, I strive to deliver high-quality and visually appealing
-          web solutions. I would offer my full commitment, and be a pleasant and
-          friendly addition to your team. I am therefore currently looking for a
-          job or an internship as a frontend developer in your reputable
-          company.
-        </p>
+        <aside className="hidden tablet:flex flex-row items-start justify-evenly p-3 mb-16">
+          <div className="w-full h-64 mt-2 p-2 text-center">
+            <p className="text-[16.5px] text-slate-100 mt-14 font-semibold">
+              Hello! I'm Oyedokun Victor Ayobami, a passionate and dedicated web
+              developer with a knack for creating dynamic and user-friendly
+              websites. I have honed my skills in front-end and back-end
+              development, ensuring that every project I undertake is both
+              visually appealing and highly functional.
+            </p>
+          </div>
+          <div className="w-full h-full p-2 border-2 border-y-0 border-dotted border-cyan-300">
+            <p className="text-center text-cyan-400 underline decoration-2 font-semibold text-xl animate-pulse mb-6">
+              MY APPROACH.
+            </p>
+            <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
+              Problem Solving{" "}
+            </strong>
+            <strong className="text-[16.5px] text-slate-100 font-semibold">
+              :- I love tackling challenges and finding innovative solutions to
+              problems.
+            </strong>
+            <br />
+            <strong className="underline text-yellow-300 text-[16px] decoration-2">
+              Collaboration
+            </strong>
+            <strong className="text-[16.5px] text-slate-100 font-semibold">
+              {" "}
+              :- I believe in the power of teamwork and enjoy working with other
+              developers, designers, and stakeholders.
+            </strong>
+            <br />
+            <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
+              Continuous Learning{" "}
+            </strong>
+            <strong className="text-[16.5px] text-slate-100 font-semibold">
+              {" "}
+              :- Technology is ever-evolving, and I am committed to continuous
+              learning and professional growth.
+            </strong>
+          </div>
+          <div className="w-full h-52 p-3">
+            <p className="text-cyan-300 text-center text-xl underline decoration-2 font-semibold animate-pulse mb-6">
+              MY SKILLS.
+            </p>
+            <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
+              Front-End Development.
+            </strong>
+            <strong className="text-[16.5px] text-slate-100 font-semibold">
+              {" "}
+              :- Proficient in HTML, CSS, Tailwind, JavaScript, and frameworks
+              like React.js.
+            </strong>{" "}
+            <br />
+            <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
+              Back-End Development.
+            </strong>
+            <strong className="text-[16.5px] text-slate-100 font-semibold">
+              {" "}
+              :- Experienced with Node.js, Express, and databases such as
+              MongoDB.
+            </strong>
+            <br />
+            <strong className="underline text-yellow-300 text-[16.5px] decoration-2">
+              Version Control.
+            </strong>
+            <strong className="text-[16.5px] text-slate-100 font-semibold">
+              {" "}
+              :- Comfortable using Git and GitHub for version control and
+              collaboration.
+            </strong>
+          </div>
+        </aside>
       </Zoom>
-
-      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between tablet:justify-evenly">
-        <p className="text-center text-yellow-300 text-[16.5px] font-bold">
+      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between p-3 fixed bottom-0 tablet:justify-between tablet:p-6">
+        <p className="text-center text-yellow-300 text-[16px] animate-bounce font-bold tablet:text-[18px]">
           Oyedokun V.&copy;
         </p>
 
-        <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 font-semibold hover:bg-black hover:text-yellow-300">
+        <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 animate-bounce font-semibold hover:bg-black hover:text-yellow-300 hover:animate-none">
           <FaWhatsapp />
           <a href="https://wa.me/2349055706732">WhatsApp</a>
         </button>
 
-        <li className="text-yellow-300 font-semibold text-[16.5px]">
+        <li className="text-yellow-300 font-semibold text-[16px] animate-bounce tablet:text-[18px]">
           Available for Job
         </li>
       </footer>
+
     </div>
   );
 };

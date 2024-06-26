@@ -4,4 +4,10 @@
 
 .active{
     color: yellow;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: rgb(2, 41, 41);
 }
+

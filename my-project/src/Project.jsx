@@ -67,8 +67,8 @@ const Project = () => {
         FRONTEND PROJECT
       </h1>
 
-      <div className="grid columns-2 gap-2">
-        <div className="mt-4 grid columns-1 justify-items-center">
+      <div className="grid columns-2 gap-2 tablet:hidden">
+        <div className="mt-4 grid columns-1 justify-items-center animate-bounceOnce">
           <div className="flex flex-row justify-evenly gap-4 p-2">
             <img src={image1} alt="" className="h-44 mt-4" />
             <p className="text-white text-[14px] mt-4 font-semibold">
@@ -80,11 +80,11 @@ const Project = () => {
             </p>
           </div>
           <button className="text-yellow-300 text-[17px] font-bold border-2 border-cyan-500 rounded-2xl h-10 w-36 bg-black -mt-8 mb-2 hover:bg-yellow-400 hover:text-black hover:border-black">
-            <a href="https://dictionary-xuxs.vercel.app/">View Project</a>
+            <a href="https://quiz-app-sage-xi-83.vercel.app/">View Project</a>
           </button>
         </div>
 
-        <div className="mt-4 grid columns-1 justify-items-center">
+        <div className="mt-4 grid columns-1 justify-items-center animate-bounceOnce">
           <div className="flex flex-row justify-evenly gap-4 p-2">
             <img src={image2} alt="" className="h-44 mt-4" />
             <p className="text-white text-[14px] mt-4 font-semibold">
@@ -100,7 +100,7 @@ const Project = () => {
           </button>
         </div>
 
-        <div className="mt-4 grid columns-1 justify-items-center">
+        <div className="mt-4 grid columns-1 justify-items-center animate-bounceOnce">
           <div className="flex flex-row justify-evenly gap-4 p-2">
             <img src={image3} alt="" className="h-40 w-44 mt-4 rounded-2xl" />
             <p className="text-white text-[14px] mt-4 font-semibold">
@@ -118,32 +118,28 @@ const Project = () => {
         <h1 className="pt-4 text-center text-yellow-300 text-xl font-semibold underline decoration-2">
           BACK-END PROJECT
         </h1>
-        <div className="mt-4 grid columns-1 border-2 border-cyan-300 border-x-0 border-dashed rounded-2xl justify-items-center">
+        <div className="mt-4 grid columns-1 border-2 border-cyan-300 border-x-0 border-dashed rounded-2xl justify-items-center mb-40">
 
         </div>
 
       </div>
 
-      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between tablet:hidden">
-        <p className="text-center text-yellow-300 text-[16px] font-bold">
+      <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between p-3 fixed bottom-0 tablet:justify-between tablet:p-6">
+        <p className="text-center text-yellow-300 text-[16px] animate-bounce font-bold tablet:text-[18px]">
           Oyedokun V.&copy;
         </p>
 
-        <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 font-semibold hover:bg-black hover:text-yellow-300">
+        <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 animate-bounce font-semibold hover:bg-black hover:text-yellow-300 hover:animate-none">
           <FaWhatsapp />
           <a href="https://wa.me/2349055706732">WhatsApp</a>
         </button>
 
-        <li className="text-yellow-300 font-semibold text-[16px]">
+        <li className="text-yellow-300 font-semibold text-[16px] animate-bounce tablet:text-[18px]">
           Available for Job
         </li>
       </footer>
 
-      <footer className="hidden tablet:flex justify-center bg-cyan-900 h-16 w-full items-center fixed bottom-0">
-        <p className="text-center text-yellow-300 text-[18px] p-4 font-bold">
-          &copy; 2024 Oyedokun V. All rights reserved.
-        </p>
-      </footer>
+      
     </div>
   );
 };
