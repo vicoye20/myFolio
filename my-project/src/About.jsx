@@ -222,7 +222,7 @@ const About = () => {
       </Zoom>
       <footer className="bg-cyan-900 h-16 w-full items-center mt-4 flex flex-row justify-between p-3 fixed bottom-0 tablet:justify-between tablet:p-6">
         <p className="text-center text-yellow-300 text-[16px] animate-bounce font-bold tablet:text-[18px]">
-          Oyedokun V.&copy;
+          Oyedokun V.A&copy;
         </p>
 
         <button className="flex flex-row items-center gap-2 bg-yellow-300 rounded-md text-black w-32 h-6 p-3 animate-bounce font-semibold hover:bg-black hover:text-yellow-300 hover:animate-none">
