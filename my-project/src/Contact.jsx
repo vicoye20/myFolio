@@ -1,13 +1,13 @@
 import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { GiDevilMask } from "react-icons/gi";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { GiHamburgerMenu, GiDevilMask } from "react-icons/gi";
+import { FaWhatsapp, FaGithub } from "react-icons/fa";
 import { Flip, Zoom } from "react-reveal";
+import axios from "axios";
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [notification, setNotification] = useState(""); // State for notification message
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,14 +29,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
+    setNotification("Message sent successfully!"); // Set notification message
+    // Send form data to server here
+    axios.post("http://localhost:3000/send",form)
+     .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+        setNotification("Failed to send message. Please try again."); // Set notification message
+      });
+      setForm({
+        surName: "",
+        firstName: "",
+        phoneNumber: "",
+        email: "",
+        companyName: "",
+        message: "",
+      })
   };
 
   return (
-    <div className="w-screen h-full bg-gray-900 tablet:w-screen tablet:fixed">
-      <header className="bg-cyan-900 h-12 w-full items-center z-1 fixed">
+    <div className="w-screen h-full bg-gray-900 tablet:w-screen">
+      <header className="bg-cyan-900 h-12 w-full items-center z-15 fixed">
         <Flip bottom>
-          <nav className=" hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
+          <nav className="hidden tablet:flex flex-row items-center p-4 justify-between font-bold text-slate-100 text-[20px] underline">
             <NavLink to="/" activeClassName="active">
               <button>Home</button>
             </NavLink>
@@ -54,7 +71,9 @@ const Contact = () => {
 
         <Flip bottom>
           <nav className="flex flex-row justify-between items-center p-2 tablet:hidden">
-          <div className="rounded-full text-yellow-300 bg-black w-10 h-10 flex items-center justify-center -mt-1"><GiDevilMask className="w-8 h-8"/></div>
+            <div className="rounded-full text-yellow-300 bg-black w-10 h-10 flex items-center justify-center -mt-1">
+              <GiDevilMask className="w-8 h-8" />
+            </div>
             <button onClick={toggleMenu}>
               <GiHamburgerMenu className="h-8 w-8 text-yellow-300 font-extrabold" />
             </button>
@@ -90,12 +109,14 @@ const Contact = () => {
         </button>
       </div>
 
-      <p className="text-white text-center mt-4 font-semibold text-[18px]">Email : oyedokunvictorayobami@gmail.com</p>
+      <p className="text-white text-center mt-4 font-semibold text-[18px]">
+        Email : oyedokunvictorayobami@gmail.com
+      </p>
 
       <Zoom>
         <div className="flex flex-col gap-2 m-auto mt-10 w-[100%] tablet:m-auto tablet:w-[50%]">
           <form className="flex flex-col gap-2 p-8" onSubmit={handleSubmit}>
-            <h1 className="text-[25px] text-center text-yellow-300 underline">
+            <h1 className="text-[25px] text-center text-yellow-300 underline animate-pulse">
               Send a Message!
             </h1>
             <input
@@ -165,6 +186,12 @@ const Contact = () => {
               Submit
             </button>
           </form>
+
+          {notification && (
+            <div className="text-center text-green-500 font-bold mt-4">
+              {notification}
+            </div>
+          )}
         </div>
       </Zoom>
 
@@ -182,7 +209,6 @@ const Contact = () => {
           Available for Job
         </li>
       </footer>
-
     </div>
   );
 };
